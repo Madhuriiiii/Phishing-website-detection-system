@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Phishing Website Detection</title>
+
+    <style>
+
+        body{
+            font-family: Arial;
+            background-color: #f4f4f4;
+            text-align: center;
+        }
+
+        .container{
+            width: 60%;
+            margin: auto;
+            margin-top: 40px;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        input{
+            input{
+    width: 120px;
+    padding: 8px;
+    margin: 5px;
+    transition: all 0.3s ease;
+}
+
+input:hover{
+    width: 220px;
+    background-color: #f0f8ff;
+    transform: scale(1.05);
+}
+
+input:focus{
+    width: 250px;
+    background-color: #e6f7ff;
+    outline: none;
+    border: 2px solid #007BFF;
+}
+        }
+
+        button{
+            padding: 10px 20px;
+            margin-top: 20px;
+            cursor: pointer;
+        }
+
+        h1{
+            color: #333;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>Phishing Website Detection System</h1>
+
+    <form action="/predict" method="POST">
+
+
+        <input type="number" name="feature0" placeholder="having_IP_Address" required>
+<input type="number" name="feature1" placeholder="URL_Length" required>
+<input type="number" name="feature2" placeholder="Shortining_Service" required>
+<input type="number" name="feature3" placeholder="having_At_Symbol" required>
+<input type="number" name="feature4" placeholder="double_slash_redirecting" required>
+<input type="number" name="feature5" placeholder="Prefix_Suffix" required>
+<input type="number" name="feature6" placeholder="having_Sub_Domain" required>
+<input type="number" name="feature7" placeholder="SSLfinal_State" required>
+
+<input type="number" name="feature8" placeholder="Domain_registeration_length" required>
+<input type="number" name="feature9" placeholder="Favicon" required>
+<input type="number" name="feature10" placeholder="port" required>
+<input type="number" name="feature11" placeholder="HTTPS_token" required>
+<input type="number" name="feature12" placeholder="Request_URL" required>
+<input type="number" name="feature13" placeholder="URL_of_Anchor" required>
+<input type="number" name="feature14" placeholder="Links_in_tags" required>
+<input type="number" name="feature15" placeholder="SFH" required>
+
+<input type="number" name="feature16" placeholder="Submitting_to_email" required>
+<input type="number" name="feature17" placeholder="Abnormal_URL" required>
+<input type="number" name="feature18" placeholder="Redirect" required>
+<input type="number" name="feature19" placeholder="on_mouseover" required>
+<input type="number" name="feature20" placeholder="RightClick" required>
+<input type="number" name="feature21" placeholder="popUpWidnow" required>
+<input type="number" name="feature22" placeholder="Iframe" required>
+<input type="number" name="feature23" placeholder="age_of_domain" required>
+
+<input type="number" name="feature24" placeholder="DNSRecord" required>
+<input type="number" name="feature25" placeholder="web_traffic" required>
+<input type="number" name="feature26" placeholder="Page_Rank" required>
+<input type="number" name="feature27" placeholder="Google_Index" required>
+<input type="number" name="feature28" placeholder="Links_pointing_to_page" required>
+<input type="number" name="feature29" placeholder="Statistical_report" required>
+<input type="number" name="feature30" placeholder="Extra_Feature" required>
+        <br>
+
+        <button type="submit">Predict</button>
+
+    </form>
+
+    <h2>{{ prediction_text }}</h2>
+
+</div>
+
+</body>
+</html>
